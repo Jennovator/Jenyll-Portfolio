@@ -1,11 +1,6 @@
 // Data to be displayed
 
-import {
-    facebook,
-    instagram,
-    linkedin,
-    github
-} from "../assets";
+import { FaFacebook, FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
   
   export const navLinks = [
     {
@@ -25,22 +20,22 @@ import {
   export const socialMedia = [
     {
       name: "Facebook",
-      icon: facebook,
+      icon: FaFacebook,
       url: "https://www.facebook.com/jenyll.mabborang"
     },
     {
       name: "Instagram",
-      icon: instagram,
+      icon: FaInstagram,
       url: "https://www.instagram.com/jnyll.mab/"
     },
     {
       name: "Linkedin",
-      icon: linkedin,
+      icon: FaLinkedin,
       url: "https://www.linkedin.com/in/jenyll-mabborang-297776289/"
     },
     {
         name: "Github",
-        icon: github,
+        icon: FaGithub,
         url: "https://github.com/Jennovator"
     }
   ];

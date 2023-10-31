@@ -47,7 +47,7 @@ const NavBar = () => {
               onClick={() => setActive(link.icon)}
             >
               <a href={link.url}>
-                <img src={link.icon} alt={link.name} className="w-[25px] h-[25px]" />
+                {React.createElement(link.icon, { size: 25 })}
               </a>
             </li>
           ))}
