@@ -1,90 +1,40 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { styles } from '../styles';
-import { navLinks, socialMedia } from '../constants';
-import { logo, menu, close } from '../assets';
+import React from 'react';
+// link
+import { Link } from 'react-scroll';
+import { navLinks } from '../constants';
+import { motion } from 'framer-motion';
+import { slideIn} from '../utils/motion';
 
 const NavBar = () => {
-
-  const [active, setActive] = useState(''); // for nav bar active state
-  const [toggle, setToggle] = useState(false); // for toggle menu
-
   return (
-    <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}>
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <Link
-          to="/"
-          className="flex items-center gap-2"
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
+    <nav className='fixed bottom-4 lg:bottom-8 w-full overflow-hidden z-50'>
+      <div className='container mx-auto'>
+        <motion.div 
+          variants={slideIn('down', 'tween', 0.5, 1)}
+          initial="hidden"
+          animate="show"
+          viewport={{once: false, amount: 0.7}}
+          className='w-full bg-black-100 h-[96px] backdrop-blur-2xl rounded-full max-w-[460px] 
+          mx-auto px-5 flex justify-between items-center text-2xl text-secondary'
         >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-          <p className="text-white text-[18px] font-bold cursor-pointer flex">Jenyll &nbsp;<span className="sm:block hidden">Mabborang</span></p>
-        </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-5">
-          {navLinks.map((link) => (
-            <li
-              key={link.id}
-              className={`${active === link.title
-                ? "text-white"
-                : "text-secondary"
-                } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(link.title)}
-            >
-              <a href={`#${link.id}`}>{link.title}</a>
-            </li>
-          ))}
-
-          {socialMedia.map((link) => (
-            <li
-              key={link.name}
-              className={`flex justify-center items-center ${active === link.icon
-                ? "shadow-xl"
-                : "shadow-md"
-                } transition duration-300 ease-in-out transform hover:scale-110 hover:opacity-80 hover:shadow-lg`}
-              onClick={() => setActive(link.icon)}
-            >
-              <a href={link.url}>
-                {React.createElement(link.icon, { size: 25 })}
-              </a>
-            </li>
-          ))}
-        </ul>
-
-        {/* For Mobile Navigation bar*/}
-        <div className="sm:hidden flex flex-1 justify-end items-center">
-          <img
-            src={toggle ? close : menu}
-            alt="menu"
-            className="w-[28px] h-[28px] object-contain cursor-pointer"
-            onClick={() => setToggle(!toggle)}
-          />
-
-          <div className={`${!toggle ? 'hidden' : 'flex'} 
-            p-6 bg-gradient-to-r from-indigo-300 to-purple-400 absolute top-20 right-0 mx-4 my-2 min-w-[140px]
-            z-10 rounded-xl`}>
-            <ul className="list-none flex justify-end items-start flex-col gap-4">
-              {navLinks.map((link) => (
-                <li
-                  key={link.id}
-                  className={`${active === link.title
-                    ? "text-white"
-                    : "text-black"
-                    } font-poppins font-medium cursor-pointer text-[16px] hover:text-white`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(link.title);
-                  }}
-                >
-                  <a href={`#${link.id}`}>{link.title}</a>
-                </li>
-              ))}
-            </ul>
-
-          </div>
-        </div>
+          {navLinks.map((link) => {
+            const Icon = link.icon; // Extract the icon component from the link object
+            return (
+              <Link 
+                key={link.id} 
+                to={link.id}
+                activeClass='active'
+                smooth={true}
+                spy={true}
+                offset={-200}
+                duration={800}
+                className='cursor-pointer w-[60px] h-[60px] flex items-center justify-center hover:bg-[#915eff] hover:text-black hover:rounded-3xl'
+              > {/* Add a key to the parent div */}
+                <Icon /> {/* Render the icon component */}
+              </Link>
+            );
+          })}
+        </motion.div>
       </div>
     </nav>
   )
