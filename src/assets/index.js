@@ -4,7 +4,8 @@ import close from "./close.svg";
 import github from "./social/github.png";
 import facebook from "./social/facebook.png";
 import instagram from "./social/instagram.png";
-import linkedin from "./social/linkedin.png"
+import linkedin from "./social/linkedin.png";
+import jen from "./jen.png";
 
 export {
   logo,
@@ -13,5 +14,6 @@ export {
   github,
   facebook,
   instagram,
-  linkedin
+  linkedin,
+  jen
 };
