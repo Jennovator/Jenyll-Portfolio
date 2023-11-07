@@ -8,7 +8,7 @@ const Header = () => {
   const [toggle, setToggle] = useState(false); // for toggle menu
 
   return (
-    <header className='fixed w-full py-5 bg-dark'>
+    <header className='w-full py-2 bg-dark'>
       <div className='container mx-auto'>
         <div className='flex justify-between items-center'>
         <Link
@@ -20,8 +20,8 @@ const Header = () => {
           }}
         >
          
-        {/* <img src={logo} alt="logo" className="w-[25] h-[100px] object-contain xxs:w-[110px]" /> */}
-        <p className="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 cursor-pointer flex"> JTM</p> 
+        <img src={logo} alt="logo" className="w-[25] h-[80px] object-contain xxs:w-[110px]" />
+        {/* <p className="lg:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 cursor-pointer"> | JENYLL</p>  */}
         </Link>
 
         <Link to='/contact'>
