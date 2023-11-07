@@ -32,7 +32,7 @@ const Hero = () => {
             className='hidden lg:flex flex-col items-center justify-center mx-auto'
             variants={fadeIn('right', 'tween', 0.5, 1)}
             initial="hidden"
-            animate="show"
+            whileInView="show"
             viewport={{ once: false, amount: 0.7 }}
           >
             <div className="w-5 h-5 rounded-full bg-[#915eff]" />
@@ -43,7 +43,7 @@ const Hero = () => {
             className='flex-1 text-center lg:text-left mx-auto'
             variants={fadeIn('right', 'tween', 0.5, 1)}
             initial="hidden"
-            animate="show"
+            whileInView="show"
             viewport={{ once: false, amount: 0.7 }}
           >
             <h1 className={`text-secondary text-[20px] lg:mt-12 lg:${styles.heroSubText} font-semibold`}>
@@ -87,7 +87,7 @@ const Hero = () => {
             className='hidden lg:flex flex-1 mx-auto max-w-[320px] lg:max-w-[700px]'
             variants={fadeIn('left', 'tween', 0.5, 1)}
             initial="hidden"
-            animate="show"
+            whileInView="show"
             viewport={{ once: false, amount: 0.7 }}
           >
             <img src={jen} alt='Jenyll Mabborang' className='w-[430px] h-[400px] mx-auto hero-image' />
