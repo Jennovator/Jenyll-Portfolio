@@ -4,9 +4,12 @@ import { styles } from '../styles';
 import { fadeIn, textVariant } from '../utils/motion';
 import { testimonials } from '../constants';
 
-const FeedbackCard = ({index, testimonial, name, designation, company, image}) => (
+const FeedbackCard = ({ index, testimonial, name, designation, company, image }) => (
   <motion.div
     variants={fadeIn("", "spring", index * 0.5, 0.75)}
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: false, amount: 0.7 }}
     className="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full mx-auto"
   >
     <p className="text-white font-black text-[48px]">"</p>
@@ -24,15 +27,15 @@ const FeedbackCard = ({index, testimonial, name, designation, company, image}) =
           </p>
         </div>
 
-        <img 
-          src={image} 
+        <img
+          src={image}
           alt={`feedback-by-${name}`}
           className="w-10 h-10 rounded-full object-cover"
         />
       </div>
     </div>
 
-    
+
   </motion.div>
 )
 
@@ -42,7 +45,12 @@ const Testimonials = () => {
       <div className='container mx-auto max-w-7xl'>
         <div>
           <div className={`${styles.padding} bg-tertiary rounded-2xl min-h-[300px]`}>
-            <motion.div variants={textVariant()}>
+            <motion.div
+              variants={textVariant()}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.7 }}
+            >
               <p className={`${styles.sectionSubText}`}>What others say</p>
               <h2 className={`${styles.sectionHeadText}`}>Testimonials.</h2>
             </motion.div>
