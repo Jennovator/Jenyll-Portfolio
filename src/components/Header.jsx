@@ -8,8 +8,8 @@ const Header = () => {
   const [toggle, setToggle] = useState(false); // for toggle menu
 
   return (
-    <header className='w-full py-2 bg-dark'>
-      <div className='container mx-auto'>
+    <header className='fixed w-full py-2 top-0 z-20 bg-dark'>
+      <div className='container mx-auto max-w-7xl'>
         <div className='flex justify-between items-center'>
         <Link
           to="/"
