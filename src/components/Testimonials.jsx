@@ -39,7 +39,7 @@ const FeedbackCard = ({index, testimonial, name, designation, company, image}) =
 const Testimonials = () => {
   return (
     <div id='testimonials' className='flex items-center mt-20'>
-      <div className='container mx-auto'>
+      <div className='container mx-auto max-w-7xl'>
         <div>
           <div className={`${styles.padding} bg-tertiary rounded-2xl min-h-[300px]`}>
             <motion.div variants={textVariant()}>
