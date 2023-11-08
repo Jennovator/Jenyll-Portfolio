@@ -67,7 +67,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
 
 const Projects = () => {
   return (
-    <div id='project' className='flex items-center mt-12 mb-36'>
+    <div id='project' className='flex items-center mt-12'>
       <div className='container mx-auto max-w-7xl'>
         <div>
           <motion.div
