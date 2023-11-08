@@ -11,6 +11,7 @@ import backend from "./backend.png";
 import fabrik from "./projects/fabrik.png";
 import littleLemon from "./projects/little-lemon.png";
 import lifeCheck from "./projects/life-check.png";
+import chat from "./chat.png";
 
 export {
   logo,
@@ -25,5 +26,6 @@ export {
   backend,
   fabrik,
   littleLemon,
-  lifeCheck
+  lifeCheck,
+  chat
 };
