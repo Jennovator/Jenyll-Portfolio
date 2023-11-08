@@ -26,7 +26,7 @@ const NavBar = () => {
                 activeClass='active'
                 smooth={true}
                 spy={true}
-                offset={-150}
+                offset={-100}
                 duration={800}
                 className='cursor-pointer w-[60px] h-[60px] flex items-center justify-center hover:bg-[#915eff] hover:text-black hover:rounded-3xl'
               > {/* Add a key to the parent div */}
