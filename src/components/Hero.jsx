@@ -49,7 +49,7 @@ const Hero = () => {
             <h1 className={`text-secondary text-[20px] lg:mt-12 lg:${styles.heroSubText} font-semibold`}>
               JENYLL <span>MABBORANG</span>
             </h1>
-            <div className={`flex-nowrap ${styles.heroHeadText}`}>
+            <div className={`flex-nowrap text-[40px] font-extrabold lg:text-[80px]`}>
               I am a {isMobile && <br />}
               <span className={`text-[#915eff] flex-1 uppercase`} >
                 {words[name]}
