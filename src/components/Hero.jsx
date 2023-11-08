@@ -26,8 +26,8 @@ const Hero = () => {
 
   return (
     <section className='min-h-[85vh] lg:min-h-[78vh] flex items-center' id='home'>
-      <div className="container mx-auto">
-        <div className='mt-28 flex flex-col gap-y-5 lg:flex-row lg:items-center lg:gap-x-7'>
+      <div className="container mx-auto max-w-7xl">
+        <div className='mt-24 flex flex-col gap-y-5 lg:flex-row lg:items-center lg:gap-x-7'>
           <motion.div 
             className='hidden lg:flex flex-col items-center justify-center mx-auto'
             variants={fadeIn('right', 'tween', 0.5, 1)}
@@ -84,7 +84,7 @@ const Hero = () => {
 
           {/* image */}
           <motion.div
-            className='hidden lg:flex flex-1 mx-auto max-w-[320px] lg:max-w-[700px]'
+            className='hidden lg:flex mx-auto max-w-[320px] lg:max-w-[700px]'
             variants={fadeIn('left', 'tween', 0.5, 1)}
             initial="hidden"
             whileInView="show"
