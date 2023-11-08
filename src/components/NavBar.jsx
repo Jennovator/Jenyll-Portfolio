@@ -19,6 +19,7 @@ const NavBar = () => {
         >
           {navLinks.map((link) => {
             const Icon = link.icon; // Extract the icon component from the link object
+            const offsetValue = link.id === 'contact' ? -100 : -150; // Conditionally set offset value
             return (
               <Link 
                 key={link.id} 
@@ -26,7 +27,7 @@ const NavBar = () => {
                 activeClass='active'
                 smooth={true}
                 spy={true}
-                offset={-100}
+                offset={offsetValue}
                 duration={800}
                 className='cursor-pointer w-[60px] h-[60px] flex items-center justify-center hover:bg-[#915eff] hover:text-black hover:rounded-3xl'
               > {/* Add a key to the parent div */}
