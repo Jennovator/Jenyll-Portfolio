@@ -8,7 +8,7 @@ import { slideIn} from '../utils/motion';
 const NavBar = () => {
   return (
     <nav className='fixed bottom-4 lg:bottom-8 w-full overflow-hidden z-50'>
-      <div className='container mx-auto'>
+      <div className='container mx-auto max-w-7xl'>
         <motion.div 
           variants={slideIn('down', 'tween', 0.5, 1)}
           initial="hidden"

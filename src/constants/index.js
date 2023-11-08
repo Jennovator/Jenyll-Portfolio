@@ -171,4 +171,12 @@ import { web, backend, fabrik, littleLemon, lifeCheck } from '../assets';
       company: "Centennial College",
       image: "https://scontent.fyzd1-2.fna.fbcdn.net/v/t39.30808-6/313412350_5948050571920874_783007924822732310_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=8Lx6hohRdN0AX8kFiUy&_nc_ht=scontent.fyzd1-2.fna&oh=00_AfBm2aZx6idTa5Tp0_lP4jT_JKObXH_uApbIMBSgFmj3-w&oe=654DF534",
     },
+    {
+      testimonial:
+        "Jenyll is very approachable and will always lend a hand when needed.",
+      name: "Romel Cagurangan",
+      designation: "Laboratory Technician",
+      company: "Cagayan Valley Medical Center",
+      image: "https://scontent.fyzd1-3.fna.fbcdn.net/v/t31.18172-8/27747631_2024572054479920_5762828932207791111_o.jpg?_nc_cat=104&ccb=1-7&_nc_sid=7a1959&_nc_ohc=4a8XP9wNfDYAX8MWnUp&_nc_ht=scontent.fyzd1-3.fna&oh=00_AfBRFK0J283gCtvIVtLRgAujcT9-t63V_4ozKW8w83zG-Q&oe=65738847",
+    },
   ];
