@@ -71,7 +71,7 @@ const Testimonials = () => {
     <div id='testimonials' className='flex items-center mt-20'>
       <div className='container mx-auto max-w-7xl'>
         <div>
-          <div className={`${styles.padding} bg-tertiary rounded-2xl min-h-[300px]`}>
+          <div className={`${styles.padding} bg-tertiary rounded-2xl min-h-[300px] mt-16`}>
             <motion.div
               variants={textVariant()}
               initial="hidden"
@@ -83,7 +83,7 @@ const Testimonials = () => {
             </motion.div>
           </div>
 
-          <div className={`${styles.paddingX} -mt-20 pb-14 gap-7`}>
+          <div className={`${styles.paddingX} -mt-20 pb-14 gap-7 mb-20`}>
           <Slider {...settings} >
             {testimonials.map((testimonial, index) => (
                 <FeedbackCard

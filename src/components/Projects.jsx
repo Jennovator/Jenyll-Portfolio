@@ -67,9 +67,9 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
 
 const Projects = () => {
   return (
-    <div id='project' className='flex items-center mt-12'>
+    <div id='project' className='flex items-center'>
       <div className='container mx-auto max-w-7xl'>
-        <div>
+        <div className='mt-8'>
           <motion.div
               variants={textVariant(0.5)}
               initial="hidden"

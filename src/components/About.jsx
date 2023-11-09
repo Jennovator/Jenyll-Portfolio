@@ -20,16 +20,16 @@ const About = () => {
       if (isMobile) {
         setSlidesToShow(3); // Set slidesToShow to 1 for mobile screens
       } else {
-        setSlidesToShow(8); // Set slidesToShow to 3 for larger screens
+        setSlidesToShow(5); // Set slidesToShow to 3 for larger screens
       }
     }, [isMobile]);
   
     const settings = {
       dots: false,
       infinite: true,
-      speed: 1000,
+      speed: 1500,
       slidesToShow: slidesToShow,
-      slidesToScroll: 1,
+      slidesToScroll: 2,
       adaptiveHeight: true,
       autoplay: true,
       autoplaySpeed: 0.5,
