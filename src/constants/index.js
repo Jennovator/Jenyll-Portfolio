@@ -116,7 +116,7 @@ import { web, backend, designer, fabrik, littleLemon, lifeCheck, javascript, htm
 
   export const projects = [
     {
-      name: "Frabik",
+      name: "Fabrik",
       description:
         "FabrikThreeJS is a web application that allows users to create custom t-shirt designs effortlessly. Users can either upload their own logo and texture or ask AI to generate a unique logo and texture for them.",
       tags: [
