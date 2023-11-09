@@ -3,7 +3,7 @@
 import { FaFacebook, FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 import { BiHomeAlt, BiUser } from 'react-icons/bi';
 import { BsTelephone, BsBriefcase, BsQuote } from 'react-icons/bs';
-import { web, backend, fabrik, littleLemon, lifeCheck, javascript, html, css, reactjs, threejs, tailwind, nodejs, mongodb, git, figma,} from '../assets';
+import { web, backend, designer, fabrik, littleLemon, lifeCheck, javascript, html, css, reactjs, threejs, tailwind, nodejs, mongodb, git, figma,} from '../assets';
   
   export const navLinks = [
     {
@@ -58,12 +58,16 @@ import { web, backend, fabrik, littleLemon, lifeCheck, javascript, html, css, re
 
   export const services = [
     {
-      title: "Web Developer",
+      title: "Frontend Developer",
       icon: web,
     },
     {
       title: "Backend Developer",
       icon: backend,
+    },
+    {
+      title: "UI/UX Designer",
+      icon: designer,
     }
   ];
 

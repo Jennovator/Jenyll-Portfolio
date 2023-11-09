@@ -8,6 +8,7 @@ import linkedin from "./social/linkedin.png";
 import jen from "./jen.png";
 import web from "./web.png";
 import backend from "./backend.png";
+import designer from "./designer.png";
 import fabrik from "./projects/fabrik.png";
 import littleLemon from "./projects/little-lemon.png";
 import lifeCheck from "./projects/life-check.png";
@@ -35,6 +36,7 @@ export {
   jen,
   web,
   backend,
+  designer,
   fabrik,
   littleLemon,
   lifeCheck,

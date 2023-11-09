@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Tilt } from 'react-tilt';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
@@ -8,32 +8,33 @@ import { technologies } from '../constants';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useMediaQuery } from 'react-responsive';
+//import { useMediaQuery } from 'react-responsive';
 
 const About = () => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' }); // Define a mobile screen breakpoint
-  const [slidesToShow, setSlidesToShow] = useState(8);
+    const [slidesToShow, setSlidesToShow] = useState(8);
 
-  useEffect(() => {
-    if (isMobile) {
-      setSlidesToShow(3); // Set slidesToShow to 1 for mobile screens
-    } else {
-      setSlidesToShow(8); // Set slidesToShow to 3 for larger screens
-    }
-  }, [isMobile]);
+    // Determine if the viewport width is less than or equal to 510 pixels
+    const isMobile = window.innerWidth <= 510;
 
-
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: slidesToShow,
-    slidesToScroll: 1,
-    adaptiveHeight: true,
-    autoplay: true,
-    autoplaySpeed: 0.5,
-    arrows: false
-  };
+    useEffect(() => {
+      if (isMobile) {
+        setSlidesToShow(3); // Set slidesToShow to 1 for mobile screens
+      } else {
+        setSlidesToShow(8); // Set slidesToShow to 3 for larger screens
+      }
+    }, [isMobile]);
+  
+    const settings = {
+      dots: false,
+      infinite: true,
+      speed: 1000,
+      slidesToShow: slidesToShow,
+      slidesToScroll: 1,
+      adaptiveHeight: true,
+      autoplay: true,
+      autoplaySpeed: 0.5,
+      arrows: false
+    };  
 
   const ServiceCard = ({ index, title, icon }) => {
     return (
@@ -50,19 +51,18 @@ const About = () => {
             }}
             className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
           >
-            <img src={icon} alt={title} />
+            <img src={icon} alt={title} className='max-w-[100px]'/>
             <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
           </div>
         </motion.div>
       </Tilt>
     )
-  };
+  }
 
   return (
-    <>
-      <div id='about' className='flex items-center mt-12 mb-16'>
-        <div className='container mx-auto max-w-7xl'>
-          <div className='mt-0'>
+      <div id='about' className='flex items-center mt-12 mb-20'>
+        <div className='container mx-auto'>
+          <div>
             <motion.div
               variants={textVariant(0.5)}
               initial="hidden"
@@ -85,7 +85,7 @@ const About = () => {
               I'm easy-going, always eager to collaborate, and dedicated to pushing the boundaries of what's possible in the digital realm.
             </motion.p>
 
-            <motion.div
+            <motion.div 
               variants={fadeIn('down', 'tween', 0.5, 1)}
               initial="hidden"
               whileInView="show"
@@ -103,10 +103,10 @@ const About = () => {
                 ))}
               </Slider>
             </div>
+
           </div>
         </div>
       </div>
-    </>
   )
 }
 
