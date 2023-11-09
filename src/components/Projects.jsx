@@ -13,7 +13,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.1 }}
-      className='flex flex-col mx-auto'
+      className='flex flex-col xxl:mx-auto'
     >
       <Tilt
         options={{
@@ -96,7 +96,7 @@ const Projects = () => {
             </motion.p>
           </div>
 
-          <div className="mt-20 flex flex-wrap gap-7 mx-auto">
+          <div className="mt-20 flex flex-wrap gap-7">
             {projects.map((project, index) => (
               <ProjectCard
                 key={`project-${index}`}

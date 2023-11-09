@@ -6,7 +6,9 @@ import { slideIn } from '../utils/motion';
 import { chat } from '../assets';
 
 const Contact = () => {
+  const contactRef = useRef(null); // Create a ref for the contact section
   const formRef = useRef();
+
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -35,7 +37,7 @@ const Contact = () => {
         to_email: 'jenyllmabborang@gmail.com',
         message: form.message
       },
-      'G6u1cIz_YBkii5oQl'
+      'Udyq872VSFjNkBEXW'
     ).then(() => {
       setLoading(false);
       alert('Thank you. I will get back to you as soon as possible.');
@@ -53,12 +55,11 @@ const Contact = () => {
   }
 
   return (
-    <div id='contact' className='flex items-center mt-12 pb-20'>
+    <div ref={contactRef} id='contact' className='flex items-center mt-12 pb-20'>
       <div className='container mx-auto max-w-7xl'>
         <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
           <motion.div
             variants={slideIn('left', "tween", 0.5, 1)}
-            
             className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
           >
             <p className={`${styles.sectionSubText}`}>Get in touch</p>
@@ -110,7 +111,7 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
+                className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl hover:bg-[#915eff] hover:shadow-secondary"
               >
                 {loading ? 'Sending...' : 'Send'}
               </button>

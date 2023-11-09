@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { styles } from '../styles';
-import { logo, menu, close } from '../assets';
+import { Link, useNavigate } from 'react-router-dom';
+import { logo} from '../assets';
 
 const Header = () => {
 
-  const [toggle, setToggle] = useState(false); // for toggle menu
+  const navigate = useNavigate();
+
+  const handleWorkWithMeClick = () => {
+    const contactSection = document.getElementById('contact'); // Get the contact section element
+    contactSection.scrollIntoView({ behavior: 'smooth' }); // Scroll to the contact section smoothly
+    navigate('/contact');
+  };
 
   return (
     <header className='fixed w-full py-2 top-0 z-20 bg-dark'>
@@ -24,9 +29,12 @@ const Header = () => {
         {/* <p className="lg:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 cursor-pointer"> | JENYLL</p>  */}
         </Link>
 
-        <Link to='/contact'>
-          <button className='btn rounded-full text-white font-semibold h-[45px] w-[150px] opacity-[0.80] hover:opacity-[1]'>Work with me</button>
-        </Link>
+          <button 
+            className='btn rounded-full shadow-md shadow-#915eff text-white font-semibold h-[45px] w-[150px] opacity-[0.80] hover:opacity-[1] hover:shadow-secondary'
+            onClick={handleWorkWithMeClick} // Call the function when the button is clicked
+          >
+              Work with me
+          </button>
 
         </div>
       </div>

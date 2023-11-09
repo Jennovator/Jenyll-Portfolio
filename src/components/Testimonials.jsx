@@ -44,12 +44,15 @@ const FeedbackCard = ({ index, testimonial, name, designation, company, image })
 )
 
 const Testimonials = () => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' }); // Define a mobile screen breakpoint
+  const isMobile = useMediaQuery({ query: '(max-width: 820px)' }); // Define a mobile screen breakpoint
+  const isTablet = useMediaQuery({ query: '(max-width: 1024px)' });
   const [slidesToShow, setSlidesToShow] = useState(3);
 
   useEffect(() => {
     if (isMobile) {
       setSlidesToShow(1); // Set slidesToShow to 1 for mobile screens
+    } else if (isTablet) {
+      setSlidesToShow(2); // Set slidesToShow to 3 for larger screens
     } else {
       setSlidesToShow(3); // Set slidesToShow to 3 for larger screens
     }

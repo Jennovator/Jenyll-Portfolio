@@ -11,7 +11,7 @@ import "slick-carousel/slick/slick-theme.css";
 //import { useMediaQuery } from 'react-responsive';
 
 const About = () => {
-    const [slidesToShow, setSlidesToShow] = useState(8);
+    const [slidesToShow, setSlidesToShow] = useState(5);
 
     // Determine if the viewport width is less than or equal to 510 pixels
     const isMobile = window.innerWidth <= 510;
