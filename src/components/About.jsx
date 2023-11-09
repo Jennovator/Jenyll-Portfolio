@@ -1,11 +1,40 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Tilt } from 'react-tilt';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { services } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
+import { technologies } from '../constants';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { useMediaQuery } from 'react-responsive';
 
 const About = () => {
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' }); // Define a mobile screen breakpoint
+  const [slidesToShow, setSlidesToShow] = useState(8);
+
+  useEffect(() => {
+    if (isMobile) {
+      setSlidesToShow(3); // Set slidesToShow to 1 for mobile screens
+    } else {
+      setSlidesToShow(8); // Set slidesToShow to 3 for larger screens
+    }
+  }, [isMobile]);
+
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: slidesToShow,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+    autoplay: true,
+    autoplaySpeed: 0.5,
+    arrows: false
+  };
+
   const ServiceCard = ({ index, title, icon }) => {
     return (
       <Tilt className="xs:w-[250px] w-full">
@@ -27,11 +56,11 @@ const About = () => {
         </motion.div>
       </Tilt>
     )
-  }
+  };
 
   return (
     <>
-      <div id='about' className='flex items-center mt-12'>
+      <div id='about' className='flex items-center mt-12 mb-16'>
         <div className='container mx-auto max-w-7xl'>
           <div className='mt-0'>
             <motion.div
@@ -56,7 +85,7 @@ const About = () => {
               I'm easy-going, always eager to collaborate, and dedicated to pushing the boundaries of what's possible in the digital realm.
             </motion.p>
 
-            <motion.div 
+            <motion.div
               variants={fadeIn('down', 'tween', 0.5, 1)}
               initial="hidden"
               whileInView="show"
@@ -66,6 +95,14 @@ const About = () => {
                 <ServiceCard key={service.title} index={index} {...service} />
               ))}
             </motion.div>
+
+            <div className='mt-20 gap-5'>
+              <Slider {...settings}>
+                {technologies.map((technology, index) => (
+                  <img key={index} src={technology.icon} alt={technology.name} className='max-w-[80px] h-[80px] gap-5 ml-5' />
+                ))}
+              </Slider>
+            </div>
           </div>
         </div>
       </div>
