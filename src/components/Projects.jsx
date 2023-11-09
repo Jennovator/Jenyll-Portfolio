@@ -3,17 +3,17 @@ import { Tilt } from 'react-tilt';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { projects } from '../constants';
-import { github } from '../assets';
+import { github, link } from '../assets';
 import { fadeIn, textVariant } from '../utils/motion';
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
+const ProjectCard = ({ index, name, description, tags, image, source_code_link, website_link }) => {
   return (
     <motion.div
       variants={fadeIn("down", "spring", index * 0.5, 0.75)}
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.1 }}
-      className='flex flex-col xxl:mx-auto'
+      className='flex flex-col xxl:mx-auto '
     >
       <Tilt
         options={{
@@ -23,42 +23,65 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
         }}
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full h-full"
       >
-        <div className="relative w-full h-[230px]">
+        <div className="group relative w-full h-[230px]">
+
+          <div className='group-hover:bg-dark/90 w-full h-full rounded-2xl absolute z-40 transition-all duration-300'></div>
+
           <img
             src={image}
             alt={name}
-            className="w-full h-full object-cover rounded-2xl"
+            className="w-full h-full object-cover rounded-2xl "
           />
 
-          <div className="absolute inset-0 flex jutify-end m-3 card-img_hover">
-            <div
+          <div className='opacity-0 absolute -bottom-8 mx-auto group-hover:opacity-100 group-hover:bottom-5 transition-all duration-500 z-50'>
+
+            <p className="mt-2 text-white text-[14px]">{description}</p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {tags.map((tag) => (
+                <p
+                  key={tag.name}
+                  className={`text-[14px] ${tag.color}`}
+                >
+                  #{tag.name}
+                </p>
+              ))}
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+        <div className="mt-5 flex flex-row justify-between">
+          <h3 className="text-white font-bold text-[20px]">{name}</h3> 
+          <div className='flex flex-row gap-3'>
+          <div
               onClick={() => window.open(source_code_link, "_blank")}
-              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+              className='violet-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
             >
               <img
                 src={github}
                 alt='source code'
                 className='w-1/2 h-1/2 object-contain'
               />
+
+            </div>
+
+            <div
+              onClick={() => window.open(website_link, "_blank")}
+              className='violet-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+            >
+              <img
+                src={link}
+                alt='Website'
+                className='w-1/2 h-1/2 object-contain'
+              />
+
             </div>
           </div>
         </div>
 
-        <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
-        </div>
-
-        <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag) =>(
-            <p 
-              key={tag.name}
-              className={`text-[14px] ${tag.color}`}
-            >
-              #{tag.name}
-            </p>
-          ))}
-        </div>
 
       </Tilt>
     </motion.div>
@@ -71,10 +94,10 @@ const Projects = () => {
       <div className='container mx-auto max-w-7xl'>
         <div className='mt-8'>
           <motion.div
-              variants={textVariant(0.5)}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: false, amount: 0.1 }}
+            variants={textVariant(0.5)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.1 }}
           >
             <p className={`${styles.sectionSubText}`}> My work </p>
             <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
@@ -97,6 +120,9 @@ const Projects = () => {
           </div>
 
           <div className="mt-20 flex flex-wrap gap-7">
+
+
+
             {projects.map((project, index) => (
               <ProjectCard
                 key={`project-${index}`}

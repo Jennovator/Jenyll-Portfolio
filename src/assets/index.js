@@ -2,6 +2,7 @@ import logo from "./logo.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 import github from "./social/github.png";
+import link from "./social/link.png";
 import facebook from "./social/facebook.png";
 import instagram from "./social/instagram.png";
 import linkedin from "./social/linkedin.png";
@@ -30,6 +31,7 @@ export {
   menu,
   close,
   github,
+  link,
   facebook,
   instagram,
   linkedin,

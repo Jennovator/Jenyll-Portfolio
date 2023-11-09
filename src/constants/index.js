@@ -143,6 +143,7 @@ import { web, backend, designer, fabrik, littleLemon, lifeCheck, javascript, htm
       ],
       image: fabrik,
       source_code_link: "https://github.com/Jennovator/Fabrik",
+      website_link: "https://fabrikthreejs.com/"
     },
     {
       name: "Little Lemon",
@@ -160,6 +161,7 @@ import { web, backend, designer, fabrik, littleLemon, lifeCheck, javascript, htm
       ],
       image: littleLemon,
       source_code_link: "https://github.com/Jennovator/Little-Lemon-Capstone",
+      website_link: "https://little-lemon-jtm.vercel.app/"
     },
     {
       name: "Life Check",
@@ -190,6 +192,7 @@ import { web, backend, designer, fabrik, littleLemon, lifeCheck, javascript, htm
       ],
       image: lifeCheck,
       source_code_link: "https://github.com/Jennovator/Group4COMP308Project",
+      website_link: "https://github.com/Jennovator/Group4COMP308Project"
     },
   ];
 

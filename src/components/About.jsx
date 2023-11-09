@@ -61,7 +61,7 @@ const About = () => {
 
   return (
       <div id='about' className='flex items-center mt-12 mb-20'>
-        <div className='container mx-auto'>
+        <div className='container mx-auto max-w-7xl'>
           <div>
             <motion.div
               variants={textVariant(0.5)}
