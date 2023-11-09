@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { fadeIn, textVariant } from '../utils/motion';
@@ -6,7 +6,7 @@ import { testimonials } from '../constants';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import { useMediaQuery } from 'react-responsive';
 
 const FeedbackCard = ({ index, testimonial, name, designation, company, image }) => (
   <motion.div
@@ -44,13 +44,27 @@ const FeedbackCard = ({ index, testimonial, name, designation, company, image })
 )
 
 const Testimonials = () => {
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' }); // Define a mobile screen breakpoint
+  const [slidesToShow, setSlidesToShow] = useState(3);
+
+  useEffect(() => {
+    if (isMobile) {
+      setSlidesToShow(1); // Set slidesToShow to 1 for mobile screens
+    } else {
+      setSlidesToShow(3); // Set slidesToShow to 3 for larger screens
+    }
+  }, [isMobile]);
+
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
-    slidesToShow: 3,
+    speed: 5000,
+    slidesToShow: slidesToShow,
     slidesToScroll: 1,
     adaptiveHeight: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    fadeIn
   };
 
   return (
@@ -70,7 +84,7 @@ const Testimonials = () => {
           </div>
 
           <div className={`${styles.paddingX} -mt-20 pb-14 gap-7`}>
-          <Slider {...settings}>
+          <Slider {...settings} >
             {testimonials.map((testimonial, index) => (
                 <FeedbackCard
                   key={testimonial.name}
