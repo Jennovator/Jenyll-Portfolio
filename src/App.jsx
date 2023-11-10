@@ -1,4 +1,4 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Hero, NavBar, Header, About, Projects, Testimonials, Contact, StarsCanvas } from './components';
 
 const App = () => {
@@ -17,8 +17,15 @@ const App = () => {
           <Contact />
           <StarsCanvas />
         </div>
-
       </div>
+
+      <Routes>
+        <Route path="/" element={<Hero />}/>
+        <Route path="/about" element={<About />}/>
+        <Route path="/project" element={<Projects />}/>
+        <Route path="/testimonials" element={<Testimonials />}/>
+        <Route path="/contact" element={<Contact />}/>
+      </Routes>
     </BrowserRouter>
   )
 }
