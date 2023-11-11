@@ -60,7 +60,7 @@ const Hero = () => {
             </p>
 
             <div className="mt-12 mb-10 cursor-pointer">
-              <a href="https://drive.google.com/file/d/1CctZ2S0Zkb9NsUjMVyu5baClj3nwr_JR/view?usp=drive_link"
+              <a href="/src/assets/RESUME-MABBORANG.pdf"
                 download={true}
                 className="bg-fuschia py-2.5 px-6 outline-none text-white font-bold drop-shadow-2xl rounded-xl hover:bg-secondary xxs:cursor-pointer"
               >

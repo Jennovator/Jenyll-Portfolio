@@ -203,7 +203,7 @@ import { web, backend, designer, fabrik, littleLemon, lifeCheck, javascript, htm
       name: "Apple Duquinal",
       designation: "Lorem Ipsum",
       company: "ABC",
-      image: "https://scontent.fyzd1-2.fna.fbcdn.net/v/t39.30808-6/347418463_6888190947867422_4670961577209626614_n.jpg?stp=cp6_dst-jpg&_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=rWoVK4B6Ec4AX8CdsgK&_nc_ht=scontent.fyzd1-2.fna&oh=00_AfD_msyz84CAzgt36a8iuv9YLn8TuZ4VnGg2ZXzQnkjSWg&oe=654D9D86",
+      image: "https://scontent-yyz1-1.xx.fbcdn.net/v/t1.6435-9/163871484_4316881528331723_558567644560364518_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=be3454&_nc_ohc=XyEtHNoH6dQAX8XkvEl&_nc_ht=scontent-yyz1-1.xx&oh=00_AfAtQlQpLtHNl9qt1YbK_8eBv1R8oRBpQb8sb3y8LwdY1w&oe=65762BAE",
     },
     {
       testimonial:
@@ -211,7 +211,7 @@ import { web, backend, designer, fabrik, littleLemon, lifeCheck, javascript, htm
       name: "Angel Ayra Carino",
       designation: "Data Entry Specialist",
       company: "Xerox",
-      image: "https://scontent.fyzd1-2.fna.fbcdn.net/v/t39.30808-6/354063241_6997646683582845_5043900879073561636_n.jpg?stp=cp6_dst-jpg&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=DR4sAjEITukAX-EjSxI&_nc_ht=scontent.fyzd1-2.fna&oh=00_AfCJqrhBecy8TkTpeDN8bdANHm3nPAWZMAegE0WPXKYLMQ&oe=654E8D66",
+      image: "https://scontent-yyz1-1.xx.fbcdn.net/v/t39.30808-6/354063241_6997646683582845_5043900879073561636_n.jpg?stp=cp6_dst-jpg&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=aYOXK_MKoEYAX_Ej4Ea&_nc_ht=scontent-yyz1-1.xx&oh=00_AfBzGpQBUbV2YWCG_XDbeaTsW2MCIlPHUtNrB7-6tVMmew&oe=65547C26",
     },
     {
       testimonial:
@@ -219,7 +219,7 @@ import { web, backend, designer, fabrik, littleLemon, lifeCheck, javascript, htm
       name: "Jane Solema",
       designation: "Student",
       company: "Centennial College",
-      image: "https://scontent.fyzd1-2.fna.fbcdn.net/v/t39.30808-6/313412350_5948050571920874_783007924822732310_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=8Lx6hohRdN0AX8kFiUy&_nc_ht=scontent.fyzd1-2.fna&oh=00_AfBm2aZx6idTa5Tp0_lP4jT_JKObXH_uApbIMBSgFmj3-w&oe=654DF534",
+      image: "https://scontent-yyz1-1.xx.fbcdn.net/v/t39.30808-6/313412350_5948050571920874_783007924822732310_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=wulk14ywcRsAX-DGSWZ&_nc_ht=scontent-yyz1-1.xx&oh=00_AfB5jKcud8VH0besH6A_JgpllhEfKT8_Wx4TY-Zrncqc6g&oe=6553E3F4",
     },
     {
       testimonial:
