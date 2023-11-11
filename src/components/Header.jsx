@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { logo} from '../assets';
 
 const Header = () => {
 
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
 
   const handleWorkWithMeClick = () => {
     const contactSection = document.getElementById('contact'); // Get the contact section element
     contactSection.scrollIntoView({ behavior: 'smooth' }); // Scroll to the contact section smoothly
-    navigate('/contact');
+    
   };
 
   return (

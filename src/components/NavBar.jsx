@@ -1,18 +1,11 @@
 import React from 'react';
 // link
 import { Link } from 'react-scroll';
-import { useNavigate } from 'react-router-dom';
 import { navLinks } from '../constants';
 import { motion } from 'framer-motion';
 import { slideIn} from '../utils/motion';
 
 const NavBar = () => {
-
-  const navigate = useNavigate(); // Access the history object using useHistory hook
-
-  const handleLinkClick = (id) => {
-    navigate(`/${id}`); // Change the URL when a link is clicked
-  };
 
   return (
     <nav className='fixed bottom-4 lg:bottom-8 w-full overflow-hidden z-50'>
@@ -37,7 +30,6 @@ const NavBar = () => {
                 spy={true}
                 offset={offsetValue}
                 duration={800}
-                onClick={() => handleLinkClick(link.id)} // Handle URL change when a link is clicked
                 className='cursor-pointer w-[60px] h-[60px] flex items-center justify-center hover:bg-[#915eff] hover:text-black hover:rounded-3xl'
               > {/* Add a key to the parent div */}
                 <Icon /> {/* Render the icon component */}
