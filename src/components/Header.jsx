@@ -30,7 +30,7 @@ const Header = () => {
         </Link>
 
           <button 
-            className='btn rounded-full shadow-md shadow-#915eff text-white font-semibold h-[45px] w-[150px] opacity-[0.80] hover:opacity-[1] hover:shadow-secondary'
+            className='bg-fuschia rounded-full shadow-md shadow-[#1f1b2a] text-white font-semibold h-[45px] w-[150px] opacity-[0.80] hover:bg-fuschia/80 focus:ring-2 drop-shadow-xl transform active:scale-y-75 transition-transform'
             onClick={handleWorkWithMeClick} // Call the function when the button is clicked
           >
               Work with me

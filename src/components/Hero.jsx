@@ -62,7 +62,7 @@ const Hero = () => {
             <div className="mt-12 mb-10 cursor-pointer">
               <a href="https://drive.google.com/file/d/1CctZ2S0Zkb9NsUjMVyu5baClj3nwr_JR/view?usp=drive_link"
                 download={true}
-                className="bg-fuschia py-2.5 px-6 outline-none text-white font-bold drop-shadow-2xl rounded-xl hover:bg-secondary xxs:cursor-pointer"
+                className="bg-fuschia py-2.5 px-6 outline-none text-white font-bold drop-shadow-2xl rounded-xl hover:bg-fuschia/80 focus:ring-4 transform active:scale-y-75 transition-transform xxs:cursor-pointer "
               >
                 Resume
               </a>
