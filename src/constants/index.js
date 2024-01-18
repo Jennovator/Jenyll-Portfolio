@@ -141,6 +141,7 @@ import { web, backend, designer, fabrik, littleLemon, lifeCheck, medicare, javas
           color: "violet-gradient",
         },
       ],
+      category:['with-backend', 'UI/UX'],
       image: fabrik,
       source_code_link: "https://github.com/Jennovator/Fabrik",
       website_link: "https://fabrikthreejs.com/"
@@ -159,6 +160,7 @@ import { web, backend, designer, fabrik, littleLemon, lifeCheck, medicare, javas
           color: "pink-text-gradient",
         },
       ],
+      category:'front-end',
       image: littleLemon,
       source_code_link: "https://github.com/Jennovator/Little-Lemon-Capstone",
       website_link: "https://little-lemon-jtm.vercel.app/"
@@ -190,6 +192,7 @@ import { web, backend, designer, fabrik, littleLemon, lifeCheck, medicare, javas
         },
         
       ],
+      category:'with-backend',
       image: lifeCheck,
       source_code_link: "https://github.com/Jennovator/Group4COMP308Project",
       website_link: "https://github.com/Jennovator/Group4COMP308Project"
@@ -216,6 +219,7 @@ import { web, backend, designer, fabrik, littleLemon, lifeCheck, medicare, javas
           color: "orange-text-gradient",
         } 
       ],
+      category:['front-end', 'UI/UX'],
       image: medicare,
       source_code_link: "https://github.com/Jennovator/Medicare-Booking",
       website_link: "https://medicare-booking.vercel.app/"

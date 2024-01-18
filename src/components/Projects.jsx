@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Tilt } from 'react-tilt';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
@@ -89,6 +89,21 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
 }
 
 const Projects = () => {
+
+  const [activeTab, setActiveTab] = useState('all');
+
+  const filterProjects = (category) => {
+    if (category === 'all') {
+      return projects;
+    } else {
+      return projects.filter(project => project.category.includes(category));
+    }
+  };
+
+  const filteredProjects = filterProjects(activeTab);
+
+  const tabs = ['all', 'front-end', 'with-backend', 'UI/UX'];
+
   return (
     <div id='project' className='flex items-center'>
       <div className='container mx-auto max-w-7xl'>
@@ -119,16 +134,27 @@ const Projects = () => {
             </motion.p>
           </div>
 
-          <div className="mt-20 flex flex-wrap gap-7 items-center justify-between">
+          <div className="mt-10 flex flex-wrap gap-7 items-center justify-between">
+            <div className="flex gap-4 mb-8">
+              {tabs.map((tab) => (
+                <button
+                  key={tab}
+                  className={`text-sm px-3 py-2 rounded-full cursor-pointer ${
+                    activeTab === tab ? 'bg-primary text-white' : 'bg-light-gray'
+                  }`}
+                  onClick={() => setActiveTab(tab)}
+                >
+                  {tab}
+                </button>
+              ))}
+            </div>
 
-            {projects.map((project, index) => (
-              <ProjectCard
-                key={`project-${index}`}
-                index={index}
-                {...project}
-              />
+            <div className={`grid grid-cols-3 gap-16 mb-8`}>
+             {filteredProjects.map((project, index) => (
+              
+              <ProjectCard key={`project-${index}`} index={index} {...project} />
             ))}
-
+           </div>
           </div>
         </div>
       </div>
