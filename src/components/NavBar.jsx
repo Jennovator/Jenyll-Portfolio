@@ -20,7 +20,7 @@ const NavBar = () => {
         >
           {navLinks.map((link) => {
             const Icon = link.icon; // Extract the icon component from the link object
-            const offsetValue = link.id === 'contact' ? -20 : -150; // Conditionally set offset value
+            const offsetValue = link.id === 'contact' ? -20 : -100; // Conditionally set offset value
             return (
               <Link 
                 key={link.id} 
