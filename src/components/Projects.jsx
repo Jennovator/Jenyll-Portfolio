@@ -135,7 +135,7 @@ const Projects = () => {
           </div>
 
           <div className="mt-10 flex flex-wrap gap-7 items-center justify-between">
-            <div className="flex gap-4 mb-8">
+            <div className="flex gap-4 mb-8 sm:items-center">
               {tabs.map((tab) => (
                 <button
                   key={tab}
@@ -149,7 +149,7 @@ const Projects = () => {
               ))}
             </div>
 
-            <div className={`grid grid-cols-3 gap-16 mb-8`}>
+            <div className={`grid xl:grid-cols-3 gap-16 mb-8 xxs:grid-cols-1 sm:grid-cols-2`}>
              {filteredProjects.map((project, index) => (
               
               <ProjectCard key={`project-${index}`} index={index} {...project} />
