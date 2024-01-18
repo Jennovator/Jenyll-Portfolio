@@ -119,9 +119,7 @@ const Projects = () => {
             </motion.p>
           </div>
 
-          <div className="mt-20 flex flex-wrap gap-7">
-
-
+          <div className="mt-20 flex flex-wrap gap-7 items-center justify-between">
 
             {projects.map((project, index) => (
               <ProjectCard
