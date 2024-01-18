@@ -13,6 +13,7 @@ import designer from "./designer.png";
 import fabrik from "./projects/fabrik.png";
 import littleLemon from "./projects/little-lemon.png";
 import lifeCheck from "./projects/life-check.png";
+import medicare from "./projects/medicare.png";
 import chat from "./chat.png";
 
 import css from "./tech/css.png";
@@ -42,6 +43,7 @@ export {
   fabrik,
   littleLemon,
   lifeCheck,
+  medicare,
   chat,
   css,
   figma,

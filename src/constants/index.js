@@ -3,7 +3,7 @@
 import { FaFacebook, FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 import { BiHomeAlt, BiUser } from 'react-icons/bi';
 import { BsTelephone, BsBriefcase, BsQuote } from 'react-icons/bs';
-import { web, backend, designer, fabrik, littleLemon, lifeCheck, javascript, html, css, reactjs, threejs, tailwind, nodejs, mongodb, git, figma,} from '../assets';
+import { web, backend, designer, fabrik, littleLemon, lifeCheck, medicare, javascript, html, css, reactjs, threejs, tailwind, nodejs, mongodb, git, figma,} from '../assets';
   
   export const navLinks = [
     {
@@ -193,6 +193,32 @@ import { web, backend, designer, fabrik, littleLemon, lifeCheck, javascript, htm
       image: lifeCheck,
       source_code_link: "https://github.com/Jennovator/Group4COMP308Project",
       website_link: "https://github.com/Jennovator/Group4COMP308Project"
+    },
+    {
+      name: "Medicare",
+      description:
+        "A user-friendly medical platform using React, Tailwind CSS, and Vite to streamline Medicare consultation scheduling. Where patient can find a doctor and book an appointment with them.",
+      tags: [
+        {
+          name: "react",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "nodejs",
+          color: "green-text-gradient",
+        },
+        {
+          name: "express",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "mongodb",
+          color: "orange-text-gradient",
+        } 
+      ],
+      image: medicare,
+      source_code_link: "https://github.com/Jennovator/Medicare-Booking",
+      website_link: "https://medicare-booking.vercel.app/"
     },
   ];
 
