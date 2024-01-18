@@ -112,8 +112,8 @@ const Projects = () => {
               className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
             >
               Welcome to my projects portfolio, where creativity meets functionality.
-              Here, I showcase a collection of my endeavors that reflect my passion for innovation and problem-solving. 4
-              Each project is a testament to my skills, dedication, and love for bringing ideas to life.
+              Here, I showcase a collection of my endeavors that reflect my passion for innovation and problem-solving. For
+              each project is a testament to my skills, dedication, and love for bringing ideas to life.
               Explore these pages to discover the diverse range of projects I have undertaken,
               each one a unique journey in the world of design, technology, and creativity.
             </motion.p>
